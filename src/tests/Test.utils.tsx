@@ -7,6 +7,7 @@ import {
   getAllByTestId,
 } from "@testing-library/react";
 import { Provider } from "react-redux";
+import { task } from "../utils/fontawesome";
 // mocks
 export const MockStore = ({
   store,
@@ -17,7 +18,7 @@ export const MockStore = ({
 }) => {
   return <Provider store={store}>{children}</Provider>;
 };
-// settings
+// add task
 export const addTask = (tasks: string[]) => {
   const inputElement = screen.getByPlaceholderText("add task");
   const buttonElement = screen.getByRole("button", { name: "create" });
@@ -26,5 +27,12 @@ export const addTask = (tasks: string[]) => {
       target: { value: item },
     });
     fireEvent.click(buttonElement);
+  });
+};
+// delete task
+export const removeTasks = (tasks: string[]): void => {
+  tasks.forEach((item) => {
+    const deleteButton = screen.getByTestId(`delete-${item}`);
+    fireEvent.click(deleteButton);
   });
 };
