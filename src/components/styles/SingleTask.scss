@@ -1,0 +1,47 @@
+@import "../../sass/base";
+
+.single-task {
+  padding: $spacingMedium $spacingSmall;
+  border-radius: $radius;
+  background-color: $black-3;
+  margin-bottom: $spacingBig;
+  &__upper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  &__bottom {
+    overflow: hidden;
+  }
+  &__icon {
+    &:hover {
+      color: $white-1;
+      cursor: pointer;
+    }
+    &--green {
+      color: $green-1;
+    }
+    &--blue {
+      color: $blue-2;
+    }
+    &--red {
+      color: $pink-1;
+    }
+  }
+  &__icon,
+  &__bottom {
+    font-size: 2rem;
+    color: $white-2;
+    transition: $transition;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .single-task {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    &__icon:not(:last-child) {
+      margin-right: $spacingSmall;
+    }
+  }
+}

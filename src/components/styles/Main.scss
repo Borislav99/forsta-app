@@ -1,0 +1,12 @@
+@import "../../sass/base";
+.main {
+  text-align: center;
+  &-container {
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 0 $spacingBig;
+    &__footer {
+      margin-top: calc($spacingBig * 2);
+    }
+  }
+}

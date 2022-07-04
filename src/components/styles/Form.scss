@@ -1,0 +1,57 @@
+@import "../../sass/base";
+
+.form {
+  margin-top: -1rem;
+  &__input {
+    width: 100%;
+    border-radius: $radius;
+    padding: $spacingBig $spacingMedium;
+    border: none;
+    background-color: $black-3;
+    transition: $transition;
+    &:first-child {
+      color: $white-1;
+      font-family: $ff-secondary;
+      margin-bottom: $spacingMedium;
+      &:focus {
+        border: none;
+        outline: 1px solid $blue-3;
+      }
+      &::placeholder {
+        text-transform: capitalize;
+        font-weight: lighter;
+        color: $gray-3;
+        letter-spacing: calc($letter-spacing / 2);
+        transition: $transition;
+      }
+    }
+    &--btn {
+      background-color: $pink-1;
+      color: $white-1;
+      text-transform: capitalize;
+      font-weight: 999;
+      font-family: $ff-secondary;
+      transition: $transition;
+      &:hover {
+        background-color: $pink-2;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 882px) {
+  .form {
+    display: flex;
+    flex-wrap: nowrap;
+    &__input {
+      height: 100%;
+      &:first-child {
+        flex: 0 0 80%;
+        margin-right: $spacingMedium;
+      }
+      &--btn {
+        flex: 0 0 calc(20% - $spacingMedium);
+      }
+    }
+  }
+}

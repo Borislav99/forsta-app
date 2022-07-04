@@ -1,0 +1,11 @@
+.divider {
+  height: 1px;
+  background-color: $gray-1;
+  margin: $spacingSmall 0px;
+}
+.completed {
+  text-decoration: line-through;
+}
+.fontawesome {
+  margin-left: $spacingSmall;
+}

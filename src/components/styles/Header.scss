@@ -1,0 +1,9 @@
+@import "../../sass/base";
+.header {
+  background-color: $black-1;
+  padding: calc($spacingBig * 2) $spacingBig;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

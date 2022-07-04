@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: $black-2;
+  font-family: $ff-primary;
+  letter-spacing: $letter-spacing;
+}
+.btn {
+  padding: $spacingMedium;
+  background-color: $pink-1;
+  color: $white-1;
+  text-transform: capitalize;
+  font-weight: 999;
+  font-family: $ff-secondary;
+  transition: $transition;
+  border-radius: $radius;
+  text-decoration: none;
+  font-size: 1.5rem;
+  &:hover {
+    background-color: $pink-2;
+    cursor: pointer;
+  }
+}

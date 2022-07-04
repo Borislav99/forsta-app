@@ -1,0 +1,18 @@
+@import "../../sass/base";
+.no-tasks {
+  &__icon {
+    font-size: 5rem;
+    color: $white-1;
+  }
+  &__text {
+    color: $gray-3;
+    font-size: 1.5rem;
+    font-weight: 999;
+    &:last-child {
+      margin-top: $spacingMedium;
+      font-weight: 500;
+      color: $blue-2;
+      letter-spacing: 0px;
+    }
+  }
+}
